@@ -30,6 +30,8 @@
  */
 
 @theme inline {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -73,39 +75,46 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.5rem;
+  --background: oklch(0.98 0.008 240);
+  --foreground: oklch(0.19 0.005 90);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.19 0.005 90);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.19 0.005 90);
+  --primary: oklch(0.55 0.155 242);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.42 0.12 255);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.96 0.01 240);
+  --muted-foreground: oklch(0.49 0.035 244);
+  --accent: oklch(0.92 0.035 237);
+  --accent-foreground: oklch(0.3 0.085 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.9 0.025 240);
+  --input: oklch(0.9 0.025 240);
+  --ring: oklch(0.55 0.155 242);
+  --chart-1: oklch(0.55 0.155 242);
+  --chart-2: oklch(0.42 0.12 255);
+  --chart-3: oklch(0.63 0.075 237);
+  --chart-4: oklch(0.74 0.06 226);
+  --chart-5: oklch(0.33 0.08 252);
+  --sidebar: oklch(0.98 0.008 240);
+  --sidebar-foreground: oklch(0.19 0.005 90);
+  --sidebar-primary: oklch(0.55 0.155 242);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.92 0.035 237);
+  --sidebar-accent-foreground: oklch(0.3 0.085 250);
+  --sidebar-border: oklch(0.9 0.025 240);
+  --sidebar-ring: oklch(0.55 0.155 242);
+  --novare-blue: oklch(0.55 0.155 242);
+  --novare-navy: oklch(0.42 0.12 255);
+  --novare-steel: oklch(0.63 0.075 237);
+  --novare-ink: oklch(0.19 0.005 90);
+  --novare-paper: oklch(0.98 0.008 240);
+  --novare-night: oklch(0.23 0.055 253);
+  --novare-gradient: linear-gradient(90deg, var(--novare-steel), var(--novare-blue), var(--novare-navy));
 }
 
 .dark {
@@ -151,5 +160,44 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01" on;
   }
+
+  h1, h2, h3, h4 { font-family: var(--font-display); }
+
+  ::selection { background: var(--novare-blue); color: white; }
+}
+
+@utility text-gradient-brand {
+  background-image: var(--novare-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+@utility blueprint-grid {
+  background-image: linear-gradient(to right, color-mix(in oklab, var(--novare-steel) 18%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklab, var(--novare-steel) 18%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes blueprint-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.blueprint-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: blueprint-draw 2.4s ease forwards; }
+.blueprint-line:nth-child(2) { animation-delay: .2s; }
+.blueprint-line:nth-child(3) { animation-delay: .4s; }
+.blueprint-line:nth-child(4) { animation-delay: .6s; }
+.float-slow { animation: drift 6s ease-in-out infinite; }
+.glass-header { background: color-mix(in oklab, var(--background) 86%, transparent); backdrop-filter: blur(18px) saturate(145%); }
+.brand-gradient { background-image: var(--novare-gradient); }
+.section-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--novare-steel), var(--novare-blue), transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

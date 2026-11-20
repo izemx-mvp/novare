@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+- Keep Novare’s marketing content in typed `src/config` and `src/data` modules, with shared French site chrome and reusable page sections so routes stay consistent and maintainable.
