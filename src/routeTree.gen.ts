@@ -10,33 +10,313 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FrIndexRouteImport } from './routes/fr/index'
+import { Route as FrCarrieresRouteImport } from './routes/fr/carrieres'
+import { Route as FrClimatisationRouteImport } from './routes/fr/climatisation'
+import { Route as FrContactEtDevisRouteImport } from './routes/fr/contact-et-devis'
+import { Route as FrContratsDeMaintenanceRouteImport } from './routes/fr/contrats-de-maintenance'
+import { Route as FrDepannageUrgentRouteImport } from './routes/fr/depannage-urgent'
+import { Route as FrElectriciteRouteImport } from './routes/fr/electricite'
+import { Route as FrFaqRouteImport } from './routes/fr/faq'
+import { Route as FrFroidCuisineIndustrielleRouteImport } from './routes/fr/froid-cuisine-industrielle'
+import { Route as FrMaintenanceMultiTechniqueRouteImport } from './routes/fr/maintenance-multi-technique'
+import { Route as FrMentionsLegalesRouteImport } from './routes/fr/mentions-legales'
+import { Route as FrNosMetiersRouteImport } from './routes/fr/nos-metiers'
+import { Route as FrNosReferencesRouteImport } from './routes/fr/nos-references'
+import { Route as FrNotreMethodeRouteImport } from './routes/fr/notre-methode'
+import { Route as FrPlomberieEtChauffageRouteImport } from './routes/fr/plomberie-et-chauffage'
+import { Route as FrPolitiqueDeConfidentialiteRouteImport } from './routes/fr/politique-de-confidentialite'
+import { Route as FrQuiSommesNousRouteImport } from './routes/fr/qui-sommes-nous'
+import { Route as FrConseilsIndexRouteImport } from './routes/fr/conseils/index'
+import { Route as FrConseilsSlugRouteImport } from './routes/fr/conseils/$slug'
+import { Route as FrSecteursIndexRouteImport } from './routes/fr/secteurs/index'
+import { Route as FrSecteursSlugRouteImport } from './routes/fr/secteurs/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/fr/',
+  path: '/fr/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrCarrieresRoute = FrCarrieresRouteImport.update({
+  id: '/fr/carrieres',
+  path: '/fr/carrieres',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrClimatisationRoute = FrClimatisationRouteImport.update({
+  id: '/fr/climatisation',
+  path: '/fr/climatisation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrContactEtDevisRoute = FrContactEtDevisRouteImport.update({
+  id: '/fr/contact-et-devis',
+  path: '/fr/contact-et-devis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrContratsDeMaintenanceRoute = FrContratsDeMaintenanceRouteImport.update({
+  id: '/fr/contrats-de-maintenance',
+  path: '/fr/contrats-de-maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrDepannageUrgentRoute = FrDepannageUrgentRouteImport.update({
+  id: '/fr/depannage-urgent',
+  path: '/fr/depannage-urgent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrElectriciteRoute = FrElectriciteRouteImport.update({
+  id: '/fr/electricite',
+  path: '/fr/electricite',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrFaqRoute = FrFaqRouteImport.update({
+  id: '/fr/faq',
+  path: '/fr/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrFroidCuisineIndustrielleRoute =
+  FrFroidCuisineIndustrielleRouteImport.update({
+    id: '/fr/froid-cuisine-industrielle',
+    path: '/fr/froid-cuisine-industrielle',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FrMaintenanceMultiTechniqueRoute =
+  FrMaintenanceMultiTechniqueRouteImport.update({
+    id: '/fr/maintenance-multi-technique',
+    path: '/fr/maintenance-multi-technique',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FrMentionsLegalesRoute = FrMentionsLegalesRouteImport.update({
+  id: '/fr/mentions-legales',
+  path: '/fr/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrNosMetiersRoute = FrNosMetiersRouteImport.update({
+  id: '/fr/nos-metiers',
+  path: '/fr/nos-metiers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrNosReferencesRoute = FrNosReferencesRouteImport.update({
+  id: '/fr/nos-references',
+  path: '/fr/nos-references',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrNotreMethodeRoute = FrNotreMethodeRouteImport.update({
+  id: '/fr/notre-methode',
+  path: '/fr/notre-methode',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrPlomberieEtChauffageRoute = FrPlomberieEtChauffageRouteImport.update({
+  id: '/fr/plomberie-et-chauffage',
+  path: '/fr/plomberie-et-chauffage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrPolitiqueDeConfidentialiteRoute =
+  FrPolitiqueDeConfidentialiteRouteImport.update({
+    id: '/fr/politique-de-confidentialite',
+    path: '/fr/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const FrQuiSommesNousRoute = FrQuiSommesNousRouteImport.update({
+  id: '/fr/qui-sommes-nous',
+  path: '/fr/qui-sommes-nous',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrConseilsIndexRoute = FrConseilsIndexRouteImport.update({
+  id: '/fr/conseils/',
+  path: '/fr/conseils/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrConseilsSlugRoute = FrConseilsSlugRouteImport.update({
+  id: '/fr/conseils/$slug',
+  path: '/fr/conseils/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrSecteursIndexRoute = FrSecteursIndexRouteImport.update({
+  id: '/fr/secteurs/',
+  path: '/fr/secteurs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrSecteursSlugRoute = FrSecteursSlugRouteImport.update({
+  id: '/fr/secteurs/$slug',
+  path: '/fr/secteurs/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/fr/carrieres': typeof FrCarrieresRoute
+  '/fr/climatisation': typeof FrClimatisationRoute
+  '/fr/contact-et-devis': typeof FrContactEtDevisRoute
+  '/fr/contrats-de-maintenance': typeof FrContratsDeMaintenanceRoute
+  '/fr/depannage-urgent': typeof FrDepannageUrgentRoute
+  '/fr/electricite': typeof FrElectriciteRoute
+  '/fr/faq': typeof FrFaqRoute
+  '/fr/froid-cuisine-industrielle': typeof FrFroidCuisineIndustrielleRoute
+  '/fr/maintenance-multi-technique': typeof FrMaintenanceMultiTechniqueRoute
+  '/fr/mentions-legales': typeof FrMentionsLegalesRoute
+  '/fr/nos-metiers': typeof FrNosMetiersRoute
+  '/fr/nos-references': typeof FrNosReferencesRoute
+  '/fr/notre-methode': typeof FrNotreMethodeRoute
+  '/fr/plomberie-et-chauffage': typeof FrPlomberieEtChauffageRoute
+  '/fr/politique-de-confidentialite': typeof FrPolitiqueDeConfidentialiteRoute
+  '/fr/qui-sommes-nous': typeof FrQuiSommesNousRoute
+  '/fr/': typeof FrIndexRoute
+  '/fr/conseils/$slug': typeof FrConseilsSlugRoute
+  '/fr/secteurs/$slug': typeof FrSecteursSlugRoute
+  '/fr/conseils/': typeof FrConseilsIndexRoute
+  '/fr/secteurs/': typeof FrSecteursIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/fr/carrieres': typeof FrCarrieresRoute
+  '/fr/climatisation': typeof FrClimatisationRoute
+  '/fr/contact-et-devis': typeof FrContactEtDevisRoute
+  '/fr/contrats-de-maintenance': typeof FrContratsDeMaintenanceRoute
+  '/fr/depannage-urgent': typeof FrDepannageUrgentRoute
+  '/fr/electricite': typeof FrElectriciteRoute
+  '/fr/faq': typeof FrFaqRoute
+  '/fr/froid-cuisine-industrielle': typeof FrFroidCuisineIndustrielleRoute
+  '/fr/maintenance-multi-technique': typeof FrMaintenanceMultiTechniqueRoute
+  '/fr/mentions-legales': typeof FrMentionsLegalesRoute
+  '/fr/nos-metiers': typeof FrNosMetiersRoute
+  '/fr/nos-references': typeof FrNosReferencesRoute
+  '/fr/notre-methode': typeof FrNotreMethodeRoute
+  '/fr/plomberie-et-chauffage': typeof FrPlomberieEtChauffageRoute
+  '/fr/politique-de-confidentialite': typeof FrPolitiqueDeConfidentialiteRoute
+  '/fr/qui-sommes-nous': typeof FrQuiSommesNousRoute
+  '/fr': typeof FrIndexRoute
+  '/fr/conseils/$slug': typeof FrConseilsSlugRoute
+  '/fr/secteurs/$slug': typeof FrSecteursSlugRoute
+  '/fr/conseils': typeof FrConseilsIndexRoute
+  '/fr/secteurs': typeof FrSecteursIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/fr/carrieres': typeof FrCarrieresRoute
+  '/fr/climatisation': typeof FrClimatisationRoute
+  '/fr/contact-et-devis': typeof FrContactEtDevisRoute
+  '/fr/contrats-de-maintenance': typeof FrContratsDeMaintenanceRoute
+  '/fr/depannage-urgent': typeof FrDepannageUrgentRoute
+  '/fr/electricite': typeof FrElectriciteRoute
+  '/fr/faq': typeof FrFaqRoute
+  '/fr/froid-cuisine-industrielle': typeof FrFroidCuisineIndustrielleRoute
+  '/fr/maintenance-multi-technique': typeof FrMaintenanceMultiTechniqueRoute
+  '/fr/mentions-legales': typeof FrMentionsLegalesRoute
+  '/fr/nos-metiers': typeof FrNosMetiersRoute
+  '/fr/nos-references': typeof FrNosReferencesRoute
+  '/fr/notre-methode': typeof FrNotreMethodeRoute
+  '/fr/plomberie-et-chauffage': typeof FrPlomberieEtChauffageRoute
+  '/fr/politique-de-confidentialite': typeof FrPolitiqueDeConfidentialiteRoute
+  '/fr/qui-sommes-nous': typeof FrQuiSommesNousRoute
+  '/fr/': typeof FrIndexRoute
+  '/fr/conseils/$slug': typeof FrConseilsSlugRoute
+  '/fr/secteurs/$slug': typeof FrSecteursSlugRoute
+  '/fr/conseils/': typeof FrConseilsIndexRoute
+  '/fr/secteurs/': typeof FrSecteursIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/fr/carrieres'
+    | '/fr/climatisation'
+    | '/fr/contact-et-devis'
+    | '/fr/contrats-de-maintenance'
+    | '/fr/depannage-urgent'
+    | '/fr/electricite'
+    | '/fr/faq'
+    | '/fr/froid-cuisine-industrielle'
+    | '/fr/maintenance-multi-technique'
+    | '/fr/mentions-legales'
+    | '/fr/nos-metiers'
+    | '/fr/nos-references'
+    | '/fr/notre-methode'
+    | '/fr/plomberie-et-chauffage'
+    | '/fr/politique-de-confidentialite'
+    | '/fr/qui-sommes-nous'
+    | '/fr/'
+    | '/fr/conseils/$slug'
+    | '/fr/secteurs/$slug'
+    | '/fr/conseils/'
+    | '/fr/secteurs/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/fr/carrieres'
+    | '/fr/climatisation'
+    | '/fr/contact-et-devis'
+    | '/fr/contrats-de-maintenance'
+    | '/fr/depannage-urgent'
+    | '/fr/electricite'
+    | '/fr/faq'
+    | '/fr/froid-cuisine-industrielle'
+    | '/fr/maintenance-multi-technique'
+    | '/fr/mentions-legales'
+    | '/fr/nos-metiers'
+    | '/fr/nos-references'
+    | '/fr/notre-methode'
+    | '/fr/plomberie-et-chauffage'
+    | '/fr/politique-de-confidentialite'
+    | '/fr/qui-sommes-nous'
+    | '/fr'
+    | '/fr/conseils/$slug'
+    | '/fr/secteurs/$slug'
+    | '/fr/conseils'
+    | '/fr/secteurs'
+  id:
+    | '__root__'
+    | '/'
+    | '/fr/carrieres'
+    | '/fr/climatisation'
+    | '/fr/contact-et-devis'
+    | '/fr/contrats-de-maintenance'
+    | '/fr/depannage-urgent'
+    | '/fr/electricite'
+    | '/fr/faq'
+    | '/fr/froid-cuisine-industrielle'
+    | '/fr/maintenance-multi-technique'
+    | '/fr/mentions-legales'
+    | '/fr/nos-metiers'
+    | '/fr/nos-references'
+    | '/fr/notre-methode'
+    | '/fr/plomberie-et-chauffage'
+    | '/fr/politique-de-confidentialite'
+    | '/fr/qui-sommes-nous'
+    | '/fr/'
+    | '/fr/conseils/$slug'
+    | '/fr/secteurs/$slug'
+    | '/fr/conseils/'
+    | '/fr/secteurs/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FrCarrieresRoute: typeof FrCarrieresRoute
+  FrClimatisationRoute: typeof FrClimatisationRoute
+  FrContactEtDevisRoute: typeof FrContactEtDevisRoute
+  FrContratsDeMaintenanceRoute: typeof FrContratsDeMaintenanceRoute
+  FrDepannageUrgentRoute: typeof FrDepannageUrgentRoute
+  FrElectriciteRoute: typeof FrElectriciteRoute
+  FrFaqRoute: typeof FrFaqRoute
+  FrFroidCuisineIndustrielleRoute: typeof FrFroidCuisineIndustrielleRoute
+  FrMaintenanceMultiTechniqueRoute: typeof FrMaintenanceMultiTechniqueRoute
+  FrMentionsLegalesRoute: typeof FrMentionsLegalesRoute
+  FrNosMetiersRoute: typeof FrNosMetiersRoute
+  FrNosReferencesRoute: typeof FrNosReferencesRoute
+  FrNotreMethodeRoute: typeof FrNotreMethodeRoute
+  FrPlomberieEtChauffageRoute: typeof FrPlomberieEtChauffageRoute
+  FrPolitiqueDeConfidentialiteRoute: typeof FrPolitiqueDeConfidentialiteRoute
+  FrQuiSommesNousRoute: typeof FrQuiSommesNousRoute
+  FrIndexRoute: typeof FrIndexRoute
+  FrConseilsSlugRoute: typeof FrConseilsSlugRoute
+  FrSecteursSlugRoute: typeof FrSecteursSlugRoute
+  FrConseilsIndexRoute: typeof FrConseilsIndexRoute
+  FrSecteursIndexRoute: typeof FrSecteursIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +328,179 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/': {
+      id: '/fr/'
+      path: '/fr'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/carrieres': {
+      id: '/fr/carrieres'
+      path: '/fr/carrieres'
+      fullPath: '/fr/carrieres'
+      preLoaderRoute: typeof FrCarrieresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/climatisation': {
+      id: '/fr/climatisation'
+      path: '/fr/climatisation'
+      fullPath: '/fr/climatisation'
+      preLoaderRoute: typeof FrClimatisationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/contact-et-devis': {
+      id: '/fr/contact-et-devis'
+      path: '/fr/contact-et-devis'
+      fullPath: '/fr/contact-et-devis'
+      preLoaderRoute: typeof FrContactEtDevisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/contrats-de-maintenance': {
+      id: '/fr/contrats-de-maintenance'
+      path: '/fr/contrats-de-maintenance'
+      fullPath: '/fr/contrats-de-maintenance'
+      preLoaderRoute: typeof FrContratsDeMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/depannage-urgent': {
+      id: '/fr/depannage-urgent'
+      path: '/fr/depannage-urgent'
+      fullPath: '/fr/depannage-urgent'
+      preLoaderRoute: typeof FrDepannageUrgentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/electricite': {
+      id: '/fr/electricite'
+      path: '/fr/electricite'
+      fullPath: '/fr/electricite'
+      preLoaderRoute: typeof FrElectriciteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/faq': {
+      id: '/fr/faq'
+      path: '/fr/faq'
+      fullPath: '/fr/faq'
+      preLoaderRoute: typeof FrFaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/froid-cuisine-industrielle': {
+      id: '/fr/froid-cuisine-industrielle'
+      path: '/fr/froid-cuisine-industrielle'
+      fullPath: '/fr/froid-cuisine-industrielle'
+      preLoaderRoute: typeof FrFroidCuisineIndustrielleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/maintenance-multi-technique': {
+      id: '/fr/maintenance-multi-technique'
+      path: '/fr/maintenance-multi-technique'
+      fullPath: '/fr/maintenance-multi-technique'
+      preLoaderRoute: typeof FrMaintenanceMultiTechniqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/mentions-legales': {
+      id: '/fr/mentions-legales'
+      path: '/fr/mentions-legales'
+      fullPath: '/fr/mentions-legales'
+      preLoaderRoute: typeof FrMentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/nos-metiers': {
+      id: '/fr/nos-metiers'
+      path: '/fr/nos-metiers'
+      fullPath: '/fr/nos-metiers'
+      preLoaderRoute: typeof FrNosMetiersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/nos-references': {
+      id: '/fr/nos-references'
+      path: '/fr/nos-references'
+      fullPath: '/fr/nos-references'
+      preLoaderRoute: typeof FrNosReferencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/notre-methode': {
+      id: '/fr/notre-methode'
+      path: '/fr/notre-methode'
+      fullPath: '/fr/notre-methode'
+      preLoaderRoute: typeof FrNotreMethodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/plomberie-et-chauffage': {
+      id: '/fr/plomberie-et-chauffage'
+      path: '/fr/plomberie-et-chauffage'
+      fullPath: '/fr/plomberie-et-chauffage'
+      preLoaderRoute: typeof FrPlomberieEtChauffageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/politique-de-confidentialite': {
+      id: '/fr/politique-de-confidentialite'
+      path: '/fr/politique-de-confidentialite'
+      fullPath: '/fr/politique-de-confidentialite'
+      preLoaderRoute: typeof FrPolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/qui-sommes-nous': {
+      id: '/fr/qui-sommes-nous'
+      path: '/fr/qui-sommes-nous'
+      fullPath: '/fr/qui-sommes-nous'
+      preLoaderRoute: typeof FrQuiSommesNousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/conseils/': {
+      id: '/fr/conseils/'
+      path: '/fr/conseils'
+      fullPath: '/fr/conseils/'
+      preLoaderRoute: typeof FrConseilsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/conseils/$slug': {
+      id: '/fr/conseils/$slug'
+      path: '/fr/conseils/$slug'
+      fullPath: '/fr/conseils/$slug'
+      preLoaderRoute: typeof FrConseilsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/secteurs/': {
+      id: '/fr/secteurs/'
+      path: '/fr/secteurs'
+      fullPath: '/fr/secteurs/'
+      preLoaderRoute: typeof FrSecteursIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr/secteurs/$slug': {
+      id: '/fr/secteurs/$slug'
+      path: '/fr/secteurs/$slug'
+      fullPath: '/fr/secteurs/$slug'
+      preLoaderRoute: typeof FrSecteursSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FrCarrieresRoute: FrCarrieresRoute,
+  FrClimatisationRoute: FrClimatisationRoute,
+  FrContactEtDevisRoute: FrContactEtDevisRoute,
+  FrContratsDeMaintenanceRoute: FrContratsDeMaintenanceRoute,
+  FrDepannageUrgentRoute: FrDepannageUrgentRoute,
+  FrElectriciteRoute: FrElectriciteRoute,
+  FrFaqRoute: FrFaqRoute,
+  FrFroidCuisineIndustrielleRoute: FrFroidCuisineIndustrielleRoute,
+  FrMaintenanceMultiTechniqueRoute: FrMaintenanceMultiTechniqueRoute,
+  FrMentionsLegalesRoute: FrMentionsLegalesRoute,
+  FrNosMetiersRoute: FrNosMetiersRoute,
+  FrNosReferencesRoute: FrNosReferencesRoute,
+  FrNotreMethodeRoute: FrNotreMethodeRoute,
+  FrPlomberieEtChauffageRoute: FrPlomberieEtChauffageRoute,
+  FrPolitiqueDeConfidentialiteRoute: FrPolitiqueDeConfidentialiteRoute,
+  FrQuiSommesNousRoute: FrQuiSommesNousRoute,
+  FrIndexRoute: FrIndexRoute,
+  FrConseilsSlugRoute: FrConseilsSlugRoute,
+  FrSecteursSlugRoute: FrSecteursSlugRoute,
+  FrConseilsIndexRoute: FrConseilsIndexRoute,
+  FrSecteursIndexRoute: FrSecteursIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
